@@ -15,10 +15,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-  },
+  origin: 'https://chat-app-frontend-sage.vercel.app',
+  credentials: true
+},
 });
+
 
 /***
  * socket running at http://localhost:8080/
