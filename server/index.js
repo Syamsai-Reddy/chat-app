@@ -8,8 +8,10 @@ const { app, server } = require('./socket/index')
 
 // const app = express()
 app.use(cors({
-  origin: '*'
+  origin: 'https://chat-app-frontend-sage.vercel.app',
+  credentials: true
 }));
+
 
 app.use(express.json())
 app.use(cookiesParser())
