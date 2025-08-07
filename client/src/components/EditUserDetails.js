@@ -194,7 +194,7 @@ const EditUserDetails = ({ onClose, user }) => {
     e.preventDefault();
     e.stopPropagation();
     try {
-      const URL = `${process.env.REACT_APP_BACKEND_URL}/api/update-user`;
+      const URL = `https://chat-app-backend-pearl-iota.vercel.app/api/update-user`;
       const response = await axios.post(URL, data, { withCredentials: true });
 
       if (response.data.success) {
